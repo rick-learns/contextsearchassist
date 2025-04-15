@@ -5,38 +5,64 @@ const steps = [
   {
     id: 1,
     title: 'Install the Extension',
-    description: 'Download and install our browser extension from the Chrome, Firefox, or Edge store in just a few clicks.',
+    description: 'Download and install the ContextSearch browser extension from the Chrome or Firefox store.',
     icon: (
-      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M21 16V7.2C21 6.0799 21 5.51984 20.782 5.09202C20.5903 4.71569 20.2843 4.40973 19.908 4.21799C19.4802 4 18.9201 4 17.8 4H6.2C5.07989 4 4.51984 4 4.09202 4.21799C3.71569 4.40973 3.40973 4.71569 3.21799 5.09202C3 5.51984 3 6.0799 3 7.2V16.8C3 17.9201 3 18.4802 3.21799 18.908C3.40973 19.2843 3.71569 19.5903 4.09202 19.782C4.51984 20 5.0799 20 6.2 20H17.8C18.9201 20 19.4802 20 19.908 19.782C20.2843 19.5903 20.5903 19.2843 20.782 18.908C21 18.4802 21 17.9201 21 16.8V16Z" stroke="currentColor" strokeWidth="2"/>
-        <path d="M3.5 8H20.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-        <path d="M6 12H7" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+      <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M21 16V8C21 5.79086 19.2091 4 17 4H7C4.79086 4 3 5.79086 3 8V16C3 18.2091 4.79086 20 7 20H17C19.2091 20 21 18.2091 21 16Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M8 4V20" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M16 4V20" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
       </svg>
     )
   },
   {
     id: 2,
-    title: 'Select Text in Jira',
-    description: 'When viewing a Jira ticket, select any text that you want to search for in related tickets.',
+    title: 'Connect Your Jira Account',
+    description: 'Sign in with your Jira or Azure DevOps credentials to securely connect your account.',
     icon: (
-      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M6 6H18V14C18 15.1046 17.1046 16 16 16H8C6.89543 16 6 15.1046 6 14V6Z" stroke="currentColor" strokeWidth="2"/>
-        <path d="M10 10H14" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-        <path d="M9 3H15" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-        <path d="M8 20L12 16L16 20" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+      <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17 16L21 12L17 8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M21 12H9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M9 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
       </svg>
     )
   },
   {
     id: 3,
-    title: 'Find Related Tickets',
-    description: 'Right-click and select "Find Related Tickets" from the context menu to instantly see all relevant issues.',
+    title: 'Highlight Text on Any Page',
+    description: 'Select any text or error message on your screen that you want to find related tickets for.',
     icon: (
-      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M7 8H3V12H7V8Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M21 8H17V12H21V8Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M21 16H3V20H21V16Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M7 8C7 5.23858 9.23858 3 12 3C14.7614 3 17 5.23858 17 8V12C17 14.7614 14.7614 17 12 17C9.23858 17 7 14.7614 7 12V8Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+      </svg>
+    )
+  },
+  {
+    id: 4,
+    title: 'Right-Click and Search',
+    description: 'Right-click on the selected text and choose "Find Related Tickets" from the context menu.',
+    icon: (
+      <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M21 21L15 15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-        <path d="M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke="currentColor" strokeWidth="2"/>
-        <path d="M10 7V13" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-        <path d="M7 10H13" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+        <path d="M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+      </svg>
+    )
+  },
+  {
+    id: 5,
+    title: 'Review Related Tickets',
+    description: 'Browse through the results showing all related Jira tickets, sorted by relevance and filtered by status.',
+    icon: (
+      <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9 11H7V13H9V11Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M9 7H7V9H9V7Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M9 15H7V17H9V15Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M13 11H20V13H13V11Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M13 7H20V9H13V7Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M13 15H20V17H13V15Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M21 5H3C2.44772 5 2 5.44772 2 6V18C2 18.5523 2.44772 19 3 19H21C21.5523 19 22 18.5523 22 18V6C22 5.44772 21.5523 5 21 5Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
       </svg>
     )
   }
@@ -49,35 +75,49 @@ const HowItWorks = () => {
         <div className={styles.header}>
           <h2 className={styles.title}>How It Works</h2>
           <p className={styles.subtitle}>
-            Getting started with ContextSearch Assist is quick and easy. Follow these simple steps:
+            Get up and running with ContextSearch Assist in just a few simple steps
           </p>
         </div>
         
-        <div className={styles.steps}>
-          {steps.map((step) => (
-            <div key={step.id} className={styles.step}>
-              <div className={styles.stepNumber}>{step.id}</div>
-              <div className={styles.iconWrapper}>
-                {step.icon}
+        <div className={styles.stepsContainer}>
+          <div className={styles.timeline}>
+            <div className={styles.timelineLine}></div>
+            {steps.map((step) => (
+              <div className={styles.timelinePoint} key={step.id} style={{ top: `${(step.id - 1) * 25}%` }}>
+                <span className={styles.stepNumber}>{step.id}</span>
               </div>
-              <h3 className={styles.stepTitle}>{step.title}</h3>
-              <p className={styles.stepDescription}>{step.description}</p>
-            </div>
-          ))}
+            ))}
+          </div>
+          
+          <div className={styles.steps}>
+            {steps.map((step) => (
+              <div className={styles.step} key={step.id}>
+                <div className={styles.stepContent}>
+                  <div className={styles.iconContainer}>
+                    {step.icon}
+                  </div>
+                  <div className={styles.stepText}>
+                    <h3 className={styles.stepTitle}>{step.title}</h3>
+                    <p className={styles.stepDescription}>{step.description}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
         
-        <div className={styles.demo}>
-          <div className={styles.demoVideo}>
-            <div className={styles.videoBg}>
-              <div className={styles.videoPlaceholder}>
-                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M15 12L9 16.5V7.5L15 12Z" fill="currentColor"/>
-                  <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" strokeWidth="2"/>
-                </svg>
-                <p>Watch Demo</p>
-              </div>
-            </div>
-          </div>
+        <div className={styles.actionContainer}>
+          <p className={styles.actionText}>Ready to streamline your Jira workflow?</p>
+          <button 
+            className={styles.actionButton}
+            onClick={() => window.location.href = "#download"}
+          >
+            Get Started Now
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5 12H19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M12 5L19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </button>
         </div>
       </div>
     </section>

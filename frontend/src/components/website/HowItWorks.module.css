@@ -1,86 +1,176 @@
 .howItWorks {
-  background-color: var(--light-gray);
-  padding: var(--space-2xl) 0;
+  background: linear-gradient(135deg, var(--dark-blue) 0%, var(--dark-gray) 100%);
+  padding: var(--space-3xl) 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Create a decorative accent */
+.howItWorks::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  right: -200px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, var(--primary-green) 0%, rgba(72, 187, 120, 0) 70%);
+  opacity: 0.2;
+  z-index: 0;
+  border-radius: 50%;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 var(--space-md);
+  position: relative;
+  z-index: 1;
 }
 
 .header {
   text-align: center;
-  margin-bottom: var(--space-2xl);
+  margin-bottom: var(--space-3xl);
 }
 
 .title {
   font-size: var(--text-3xl);
-  margin-bottom: var(--space-md);
   color: var(--white);
+  margin-bottom: var(--space-md);
+  position: relative;
+  display: inline-block;
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-orange), var(--primary-green));
+  border-radius: var(--border-radius-sm);
 }
 
 .subtitle {
   font-size: var(--text-lg);
   color: var(--off-white);
-  max-width: 700px;
+  max-width: 600px;
   margin: 0 auto;
 }
 
-.steps {
+.stepsContainer {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: var(--space-xl);
-  margin-bottom: var(--space-2xl);
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  min-height: 600px;
 }
 
-.step {
-  flex: 1;
-  min-width: 250px;
-  max-width: 320px;
-  background-color: var(--dark-gray);
-  padding: var(--space-xl);
-  border-radius: var(--border-radius-lg);
+.timeline {
+  width: 80px;
   position: relative;
-  box-shadow: var(--shadow-md);
-  text-align: center;
+  margin-right: var(--space-xl);
+}
+
+.timelineLine {
+  position: absolute;
+  top: 20px;
+  bottom: 20px;
+  left: 35px;
+  width: 4px;
+  background: linear-gradient(to bottom, var(--primary-orange), var(--primary-green));
+  border-radius: 2px;
+}
+
+.timelinePoint {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .stepNumber {
-  position: absolute;
-  top: -20px;
-  left: 50%;
-  transform: translateX(-50%);
   width: 40px;
   height: 40px;
-  background-color: var(--primary-orange);
+  background-color: var(--medium-gray);
+  color: var(--white);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--white);
   font-weight: 700;
   font-size: var(--text-lg);
+  position: relative;
+  z-index: 2;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+.timelinePoint::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 44px;
+  height: 44px;
+  margin: auto;
+  border-radius: 50%;
+  background: linear-gradient(to right, var(--primary-orange), var(--primary-green));
+  z-index: 1;
+}
+
+.steps {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.step {
+  padding-bottom: var(--space-xl);
+  min-height: 100px;
+}
+
+.stepContent {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+  background-color: var(--dark-gray);
+  padding: var(--space-lg);
+  border-radius: var(--border-radius-lg);
+  transition: all var(--transition-normal) ease-in-out;
   box-shadow: var(--shadow-md);
 }
 
-.iconWrapper {
-  margin: var(--space-md) auto var(--space-lg);
+.stepContent:hover {
+  transform: translateX(10px);
+  box-shadow: var(--shadow-lg);
+}
+
+.iconContainer {
+  background: linear-gradient(135deg, var(--primary-orange) 0%, var(--primary-green) 100%);
   width: 80px;
   height: 80px;
-  background-color: var(--primary-green);
-  border-radius: 50%;
+  border-radius: var(--border-radius-lg);
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--white);
+  flex-shrink: 0;
+}
+
+.stepText {
+  flex: 1;
 }
 
 .stepTitle {
-  margin-bottom: var(--space-md);
-  font-size: var(--text-lg);
+  font-size: var(--text-xl);
   color: var(--white);
+  margin-bottom: var(--space-xs);
 }
 
 .stepDescription {
@@ -88,57 +178,63 @@
   line-height: 1.6;
 }
 
-.demo {
-  margin-top: var(--space-2xl);
-  text-align: center;
-}
-
-.demoVideo {
-  max-width: 800px;
-  margin: 0 auto;
-  border-radius: var(--border-radius-lg);
-  overflow: hidden;
-  box-shadow: var(--shadow-lg);
-}
-
-.videoBg {
-  background-color: var(--dark-blue);
-  aspect-ratio: 16 / 9;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.videoPlaceholder {
+.actionContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  margin-top: var(--space-3xl);
+  position: relative;
+  text-align: center;
+}
+
+.actionText {
+  font-size: var(--text-xl);
   color: var(--white);
-  cursor: pointer;
-  transition: transform var(--transition-normal) ease-in-out;
-}
-
-.videoPlaceholder:hover {
-  transform: scale(1.1);
-}
-
-.videoPlaceholder svg {
-  margin-bottom: var(--space-sm);
-  color: var(--primary-orange);
-}
-
-.videoPlaceholder p {
   font-weight: 600;
+  margin-bottom: var(--space-lg);
 }
 
-@media (max-width: 992px) {
-  .steps {
+.actionButton {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  background-color: var(--primary-orange);
+  color: var(--white);
+  font-weight: 600;
+  font-size: var(--text-md);
+  padding: var(--space-md) var(--space-lg);
+  border-radius: var(--border-radius-md);
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-fast) ease-in-out;
+}
+
+.actionButton:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+  background-color: var(--primary-green);
+}
+
+@media (max-width: 768px) {
+  .stepsContainer {
     flex-direction: column;
-    align-items: center;
+    min-height: auto;
+  }
+  
+  .timeline {
+    display: none;
   }
   
   .step {
-    max-width: 100%;
+    padding-bottom: var(--space-md);
+  }
+  
+  .stepContent {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .actionContainer {
+    margin-top: var(--space-xl);
   }
 }

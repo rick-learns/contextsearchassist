@@ -8,13 +8,15 @@ import Footer from './components/website/Footer';
 import Hero from './components/website/Hero';
 import Features from './components/website/Features';
 import HowItWorks from './components/website/HowItWorks';
-import Trust from './components/website/Trust';
 import Pricing from './components/website/Pricing';
 import CallToAction from './components/website/CallToAction';
 
 // Extension components for development/testing
 import Sidebar from './components/extension/Sidebar';
 import BrowserAction from './components/extension/BrowserAction';
+
+// Style for the main content with sidebar
+import styles from './App.module.css';
 
 function App() {
   return (
@@ -24,15 +26,26 @@ function App() {
         <Route path="/" element={
           <>
             <Header />
-            <main>
-              <Hero />
-              <Features />
-              <HowItWorks />
-              <Trust />
-              <Pricing />
-              <CallToAction />
+            <main className={styles.mainContent}>
+              <div id="content" className={styles.contentContainer}>
+                <div id="hero">
+                  <Hero />
+                </div>
+                <div id="features">
+                  <Features />
+                </div>
+                <div id="how-it-works">
+                  <HowItWorks />
+                </div>
+                <div id="pricing">
+                  <Pricing />
+                </div>
+                <div id="contact">
+                  <CallToAction />
+                </div>
+                <Footer />
+              </div>
             </main>
-            <Footer />
           </>
         } />
         

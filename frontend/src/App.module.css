@@ -1,0 +1,26 @@
+.mainContent {
+  min-height: 100vh;
+  background-color: var(--dark-blue);
+  transition: margin-left var(--transition-normal) ease-in-out;
+}
+
+.contentContainer {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+/* Desktop view - content adjusted for sidebar */
+@media (min-width: 1201px) {
+  .mainContent {
+    margin-left: 280px;
+  }
+}
+
+/* Tablet and mobile - full width with top margin for mobile header */
+@media (max-width: 1200px) {
+  .mainContent {
+    margin-left: 0;
+    margin-top: 70px;
+  }
+}
