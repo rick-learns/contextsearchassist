@@ -1,0 +1,144 @@
+.howItWorks {
+  background-color: var(--light-gray);
+  padding: var(--space-2xl) 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: var(--space-2xl);
+}
+
+.title {
+  font-size: var(--text-3xl);
+  margin-bottom: var(--space-md);
+  color: var(--white);
+}
+
+.subtitle {
+  font-size: var(--text-lg);
+  color: var(--off-white);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.steps {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-xl);
+  margin-bottom: var(--space-2xl);
+}
+
+.step {
+  flex: 1;
+  min-width: 250px;
+  max-width: 320px;
+  background-color: var(--dark-gray);
+  padding: var(--space-xl);
+  border-radius: var(--border-radius-lg);
+  position: relative;
+  box-shadow: var(--shadow-md);
+  text-align: center;
+}
+
+.stepNumber {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 40px;
+  background-color: var(--primary-orange);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  font-weight: 700;
+  font-size: var(--text-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.iconWrapper {
+  margin: var(--space-md) auto var(--space-lg);
+  width: 80px;
+  height: 80px;
+  background-color: var(--primary-green);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+}
+
+.stepTitle {
+  margin-bottom: var(--space-md);
+  font-size: var(--text-lg);
+  color: var(--white);
+}
+
+.stepDescription {
+  color: var(--off-white);
+  line-height: 1.6;
+}
+
+.demo {
+  margin-top: var(--space-2xl);
+  text-align: center;
+}
+
+.demoVideo {
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.videoBg {
+  background-color: var(--dark-blue);
+  aspect-ratio: 16 / 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.videoPlaceholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  cursor: pointer;
+  transition: transform var(--transition-normal) ease-in-out;
+}
+
+.videoPlaceholder:hover {
+  transform: scale(1.1);
+}
+
+.videoPlaceholder svg {
+  margin-bottom: var(--space-sm);
+  color: var(--primary-orange);
+}
+
+.videoPlaceholder p {
+  font-weight: 600;
+}
+
+@media (max-width: 992px) {
+  .steps {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .step {
+    max-width: 100%;
+  }
+}

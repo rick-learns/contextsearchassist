@@ -1,0 +1,52 @@
+.logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  color: var(--white);
+}
+
+.logoIcon {
+  color: var(--primary-orange);
+}
+
+.logoText {
+  font-weight: 700;
+  display: flex;
+  gap: 2px;
+}
+
+.contextPart {
+  color: var(--white);
+}
+
+.searchPart {
+  color: var(--primary-orange);
+}
+
+/* Sizes */
+.small .logoIcon {
+  width: 16px;
+  height: 16px;
+}
+
+.small .logoText {
+  font-size: var(--text-sm);
+}
+
+.medium .logoIcon {
+  width: 24px;
+  height: 24px;
+}
+
+.medium .logoText {
+  font-size: var(--text-md);
+}
+
+.large .logoIcon {
+  width: 32px;
+  height: 32px;
+}
+
+.large .logoText {
+  font-size: var(--text-xl);
+}

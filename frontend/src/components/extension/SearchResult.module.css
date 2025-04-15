@@ -1,0 +1,158 @@
+.result {
+  background-color: var(--dark-gray);
+  border-radius: var(--border-radius-md);
+  padding: var(--space-md);
+  border: 1px solid var(--light-gray);
+  cursor: pointer;
+  transition: all var(--transition-fast) ease-in-out;
+}
+
+.result:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary-orange);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--space-sm);
+}
+
+.ticketInfo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.ticketId {
+  font-weight: 600;
+  font-size: var(--text-sm);
+  color: var(--off-white);
+}
+
+.status, .priority {
+  font-size: var(--text-xs);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+/* Status styles */
+.statusOpen {
+  background-color: #2563eb;
+  color: white;
+}
+
+.statusInProgress {
+  background-color: #9333ea;
+  color: white;
+}
+
+.statusDone {
+  background-color: #16a34a;
+  color: white;
+}
+
+.statusClosed {
+  background-color: #6b7280;
+  color: white;
+}
+
+/* Priority styles */
+.priorityCritical {
+  background-color: #dc2626;
+  color: white;
+}
+
+.priorityHigh {
+  background-color: #ea580c;
+  color: white;
+}
+
+.priorityMedium {
+  background-color: #facc15;
+  color: #1e293b;
+}
+
+.priorityLow {
+  background-color: #a3a3a3;
+  color: white;
+}
+
+.relevance {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.relevanceScore {
+  font-weight: 700;
+  color: var(--primary-orange);
+  font-size: var(--text-md);
+}
+
+.relevanceLabel {
+  font-size: var(--text-xs);
+  color: var(--off-white);
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  margin-bottom: var(--space-md);
+  padding-bottom: var(--space-sm);
+  border-bottom: 1px solid var(--medium-gray);
+}
+
+.typeIcon {
+  color: var(--off-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.titleText {
+  font-size: var(--text-md);
+  font-weight: 600;
+  color: var(--white);
+  margin: 0;
+  line-height: 1.4;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.assignee {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.assigneeAvatar {
+  width: 24px;
+  height: 24px;
+  background-color: var(--primary-green);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--text-xs);
+  font-weight: 600;
+  color: var(--white);
+}
+
+.assigneeName {
+  font-size: var(--text-xs);
+  color: var(--off-white);
+}
+
+.lastUpdated {
+  font-size: var(--text-xs);
+  color: var(--off-white);
+}

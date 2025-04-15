@@ -1,0 +1,78 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 var(--space-md);
+  border-radius: var(--border-radius-md);
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all var(--transition-fast) ease-in-out;
+  border: none;
+  text-align: center;
+}
+
+/* Variants */
+.primary {
+  background-color: var(--primary-orange);
+  color: var(--white);
+}
+
+.primary:hover {
+  background-color: var(--primary-orange);
+  opacity: 0.9;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.secondary {
+  background-color: var(--primary-green);
+  color: var(--white);
+}
+
+.secondary:hover {
+  background-color: var(--primary-green);
+  opacity: 0.9;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.outline {
+  background-color: transparent;
+  color: var(--white);
+  border: 2px solid var(--off-white);
+}
+
+.outline:hover {
+  border-color: var(--primary-orange);
+  color: var(--primary-orange);
+  transform: translateY(-2px);
+}
+
+/* Sizes */
+.small {
+  height: 32px;
+  font-size: var(--text-sm);
+}
+
+.medium {
+  height: 40px;
+  font-size: var(--text-md);
+}
+
+.large {
+  height: 48px;
+  font-size: var(--text-lg);
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+/* Disabled state */
+.button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
+}
