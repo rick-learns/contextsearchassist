@@ -1,0 +1,76 @@
+Objective: Create a cohesive, professional, minimalist, and highly usable visual design system for the "ContextSearch Assist" browser extension and its supporting marketing website. This includes high-fidelity mockups for key interfaces and a unified style guide. The design must reflect the tool's efficiency, seamless integration (for the extension), clarity, and trustworthiness across all touchpoints.
+Core Product Recap: ContextSearch Assist is a browser extension for Jira Cloud (and eventually Azure DevOps) users. Its primary function is:
+User selects text within a ticket description/comment.
+User right-clicks -> selects "ContextSearch: Find mentions...".
+A browser sidebar UI appears, displaying a list of other tickets mentioning that exact text, automatically scoped to the current project.
+Results include Ticket ID (linked), Title, Status, and a text snippet where the match occurred, with the matched text visually highlighted.
+Target Audience: Software Developers, QA Engineers, Support Specialists, DevOps Engineers, Technical Product Managers. Users value efficiency, clarity, unobtrusive tools, and operate within complex interfaces (Jira/AzDO).
+Design Aesthetic: Professional Minimalism
+Minimalist: Clean layouts, clear hierarchy, focus on core content/messaging, generous use of white space, intuitive interactions, avoidance of unnecessary ornamentation. Functionality and clarity first.
+Professional: Creates a sense of trust, reliability, security, and efficiency. Looks polished and well-considered. High readability is paramount.
+Key Design Principles (Apply to Both Extension & Website):
+Clarity: Information must be instantly understandable (results, features, value proposition).
+Efficiency: UI should enable quick understanding and interaction.
+Consistency: Maintain a consistent visual language, color palette, and typography across the extension and website.
+Trustworthiness: Design should convey security and reliability.
+Readability: Use clear typography and sufficient contrast (WCAG AA minimum).
+(Extension Specific) Seamless Integration: Sidebar should feel complementary to Jira/AzDO.
+(Extension Specific) Unobtrusiveness: Sidebar shouldn't distract or obscure excessively.
+I. Browser Extension Design Requirements:
+Component 1: Extension UI (Sidebar)
+Default/Empty State: View when sidebar is opened before a search. (Simple, clear).
+Loading State: Clear visual indicator (e.g., subtle spinner/shimmer).
+No Results State: User-friendly message indicating no matches found.
+Results List State: Primary view.
+Efficient layout for ~10-15 result items.
+Visual treatment: Ticket ID link, Title, Status badge/text, Snippet.
+Snippet Highlighting Style: Define clear, accessible visual style for the matched text.
+Error State: Display user-friendly error messages clearly.
+Component 2: Extension UI (Browser Action Popup)
+Logged Out State: Logo/Name + prominent "Log in with Jira" button.
+Logged In State: Indication of logged-in status + clear "Log Out" button.
+II. Website Design Requirements:
+Overall Structure: Primarily a single-page marketing site for MVP, potentially expanding later. Must be fully responsive (Desktop, Tablet, Mobile).
+Goal: Clearly communicate the value proposition, build trust, drive installation/adoption.
+Component 1: Navigation Bar (Header)
+Logo.
+Minimal navigation links (e.g., Features, Pricing [placeholder], Login [optional, could just be via extension], Primary CTA).
+Clear Primary Call-to-Action (CTA) Button (e.g., "Install Extension", "Get Started - It's Free").
+Component 2: Hero Section
+Compelling Headline: Focus on the core pain point and solution (e.g., "Stop Wasting Time Searching Jira. Find Related Tickets Instantly.")
+Concise Sub-headline/Paragraph: Briefly explain what it is and who it's for.
+Visual Element: High-quality screenshot, short animated GIF, or clean graphic demonstrating the core select -> right-click -> see results workflow.
+Prominent Primary CTA Button.
+Component 3: Problem/Solution or How it Works Section
+Clearly articulate the pain point (manual JQL, wasted time).
+Visually demonstrate the simple 3-step solution (Select Text -> Right-Click Search -> View Contextual Results). Use icons, simplified graphics, or concise text.
+Component 4: Features Section
+Highlight 3-5 key benefits/features using icons and short descriptions.
+Examples: "Instant Contextual Search", "Automatic Project Scoping", "Clear Result Snippets", "Secure Jira Integration", "Snippet Highlighting".
+Component 5: Trust/Security Snippet
+Briefly reassure users about security (e.g., "Secure OAuth login", "We never store your Jira content", "Minimal permissions requested"). Use security-related icons if appropriate (e.g., lock).
+Component 6: (Placeholder) Pricing Section
+Design a simple, clear layout to present future pricing tiers (e.g., Free vs. Pro side-by-side).
+Clearly indicate the MVP is launching with a Free tier. Include a CTA for the target tier (e.g., "Get Started Free", "Sign Up for Pro").
+Component 7: Final Call-to-Action (CTA) Section
+Reinforce the main benefit and provide another clear installation CTA button.
+Component 8: Footer
+Logo/Name.
+Copyright information.
+Essential links: Privacy Policy, Terms of Service, Contact/Support.
+III. Shared Design System Elements:
+Color Palette: Propose a limited, professional primary & secondary palette (neutrals + 1-2 accents) used consistently across extension UI and website. Ensure WCAG AA contrast ratios. Define usage (e.g., accent for CTAs, links, highlights).
+Typography: Propose clean, readable sans-serif font pairings/hierarchy for UI elements, website headlines, and body text. Specify weights and sizes for clarity.
+Iconography: If icons are used (e.g., website features), define a consistent, clean style (e.g., line icons, solid icons).
+Button Styles: Define styles for primary and secondary CTAs (consistent shape, typography, hover/active states).
+Logo Usage: Guidelines for consistent logo placement and usage.
+Deliverables:
+High-Fidelity Mockups (Figma, Sketch, Adobe XD preferred):
+Browser Extension: All Sidebar states (Default, Loading, No Results, Results, Error) and Browser Action Popup states (Logged In, Logged Out).
+Website: Complete Landing Page design, including Desktop and Mobile responsive views.
+Unified Style Guide: Documenting Color Palette, Typography, Iconography (if used), Button Styles, Logo Usage, and specific UI treatments (e.g., Snippet Highlighting).
+Constraints & Considerations:
+Extension UI must be performant and function within typical browser constraints (sidebar width, popup size).
+Website design must be responsive and optimized for web performance.
+Implementation feasibility using standard web technologies (HTML/CSS/JS/React) is key.
+Prioritize clarity, usability, and accessibility throughout.
