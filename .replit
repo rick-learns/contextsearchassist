@@ -27,8 +27,8 @@ task = "packager.installForAll"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "cd frontend && HOST=0.0.0.0 PORT=5000 npx react-scripts start"
-waitForPort = 5000
+args = "cd frontend && HOST=0.0.0.0 PORT=3000 npm start"
+waitForPort = 3000
 
 [deployment]
 run = ["sh", "-c", "cd frontend && npm install && npm start"]
